@@ -64,6 +64,9 @@ body {
   height: 39px;
   top: 15px;
   right: 15px;
+  background-image: url(./images/X.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .green {
   height: 411px;
@@ -101,18 +104,6 @@ body {
 .dark-green-fifth::before {
   content: "5";
 }
-/* .blue {
-  display: flex;
-  height: 199px;
-  background: #88b5bf;
-  padding: 30px;
-  gap: 30px;
-}
-.drak-blue {
-  background: #0d89b0;
-  width: 40%;
-  height: 100%;
-} */
 .blue {
   height: 259px;
   display: flex;
@@ -125,8 +116,8 @@ body {
 }
 .dark-blue {
   background: #0d89b0;
-  width: 40%;
-  height: 80%;
+  width: 23%;
+  height: 77%;
 }
 .footer {
   background: #7faff6;
