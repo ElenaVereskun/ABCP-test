@@ -28,25 +28,23 @@ body {
   line-height: 23.44px;
   text-align: left;
   color: #ffffff;
+  cursor: pointer;
 }
 .popup {
-  visibility: hidden;
   opacity: 0;
-  display: flex;
-  position: relative;
+  display: none;
 }
-.header__button:hover + .popup {
-  visibility: visible;
+.header__button:focus + .popup {
   opacity: 1;
   justify-content: center;
   align-items: center;
   width: 400px;
   height: 400px;
   background: white;
+  display: flex;
+  position: relative;
 }
-.popup:target {
-  visibility: visible;
-}
+
 .popup p {
   font-size: 53px;
   font-weight: 400;
@@ -67,6 +65,7 @@ body {
   background-image: url(./images/X.png);
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 .green {
   height: 411px;
@@ -76,6 +75,7 @@ body {
   gap: 15px;
   margin-bottom: 15px;
   margin-top: 15px;
+  overflow: hidden;
 }
 .dark-green {
   display: flex;
