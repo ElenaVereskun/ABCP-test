@@ -1,6 +1,8 @@
 body {
   margin: 0;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
 }
 .container {
   background: #c0dbd9;
@@ -9,12 +11,11 @@ body {
   padding: 0px 15px 0px 15px;
 }
 .header {
-  margin-bottom: 15px;
   background: #7faff6;
   height: 100px;
 }
 .header__button {
-  width: 206px;
+  width: 208px;
   height: 39px;
   margin-top: 30.5px;
   margin-left: 30px;
@@ -22,7 +23,6 @@ body {
   border-radius: 5px;
   background: #a5c7f9;
   border: none;
-  font-family: Roboto;
   font-size: 20px;
   font-weight: 400;
   line-height: 23.44px;
@@ -30,19 +30,24 @@ body {
   color: #ffffff;
 }
 .popup {
-  display: none;
-}
-.popup:active {
+  visibility: hidden;
+  opacity: 0;
   display: flex;
   position: relative;
+}
+.header__button:hover + .popup {
+  visibility: visible;
+  opacity: 1;
   justify-content: center;
   align-items: center;
   width: 400px;
   height: 400px;
   background: white;
 }
+.popup:target {
+  visibility: visible;
+}
 .popup p {
-  font-family: Roboto;
   font-size: 53px;
   font-weight: 400;
   line-height: 62.11px;
@@ -51,14 +56,14 @@ body {
   margin: 0;
 }
 .popup button {
-  position: fixed;
-  right: 15px;
-  top: 15px;
+  position: absolute;
   border: none;
   background: #7faff6;
   border-radius: 5px;
   width: 43px;
   height: 39px;
+  top: 15px;
+  right: 15px;
 }
 .green {
   height: 411px;
@@ -67,27 +72,64 @@ body {
   flex-wrap: wrap;
   gap: 15px;
   margin-bottom: 15px;
+  margin-top: 15px;
 }
 .dark-green {
   display: flex;
   justify-content: center;
   align-items: center;
   background: #8ad191;
+  height: 198px;
   color: white;
-  font-family: Roboto;
   font-size: 53px;
   font-weight: 400;
   line-height: 62.11px;
   text-align: left;
 }
-.blue {
+.dark-green-first::before {
+  content: "1";
+}
+.dark-green-second::before {
+  content: "2";
+}
+.dark-green-third::before {
+  content: "3";
+}
+.dark-green-fourth::before {
+  content: "4";
+}
+.dark-green-fifth::before {
+  content: "5";
+}
+/* .blue {
   display: flex;
-  height: 259px;
+  height: 199px;
   background: #88b5bf;
+  padding: 30px;
   gap: 30px;
 }
 .drak-blue {
   background: #0d89b0;
-  height: 199px;
-  width: 1170px;
+  width: 40%;
+  height: 100%;
+} */
+.blue {
+  height: 259px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #88b5bf;
+  padding-left: 30px;
+  padding-right: 30px;
+  gap: 30px;
+}
+.dark-blue {
+  background: #0d89b0;
+  width: 40%;
+  height: 80%;
+}
+.footer {
+  background: #7faff6;
+  height: 100px;
+  margin-top: 100px;
 }
